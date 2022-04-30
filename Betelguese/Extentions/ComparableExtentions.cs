@@ -1,17 +1,10 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Betelguese.Extentions
+﻿namespace Betelguese.Extentions
 {
-    public static class StringExtentions
+    public static class ComparableExtentions
     {
-        public static string TrimAndReduce(this string str)
+        public static bool Between<T>(this T actual, T lower, T upper) where T : IComparable<T>
         {
-            return ConvertWhitespacesToSingleSpaces(str).Trim();
-        }
-
-        public static string ConvertWhitespacesToSingleSpaces(this string value)
-        {
-            return Regex.Replace(value, @"\s+", " ");
+            return actual.CompareTo(lower) >= 0 && actual.CompareTo(upper) < 0;
         }
     }
 }

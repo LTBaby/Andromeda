@@ -1,12 +1,11 @@
-﻿using System.Text.RegularExpressions;
+﻿using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace Betelguese.Extentions
 {
-    public static class StringExtentions
+    public static class AlterExtentions
     {
-        public static string ToSingleSpaces(this string value)
-        {
-            return Regex.Replace(value, @"\s+", " ");
-        }
+        public static string ToJson<T>(this T instance)
+    => JsonConvert.SerializeObject(instance, JsonSettings.SerializerDefaults);
     }
 }

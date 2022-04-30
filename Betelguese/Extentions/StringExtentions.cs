@@ -1,11 +1,12 @@
-﻿namespace Betelguese.Extentions
+﻿using System.Text.RegularExpressions;
+
+namespace Betelguese.Extentions
 {
-    public static class AlterExtentions
+    public static class StringExtentions
     {
-        public static bool Between<T>(this T actual, T lower, T upper) where T : IComparable<T>
+        public static string ToSingleSpaces(this string value)
         {
-            return actual.CompareTo(lower) >= 0 && actual.CompareTo(upper) < 0;
+            return Regex.Replace(value, @"\s+", " ");
         }
-        
     }
 }

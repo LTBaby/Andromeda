@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Titan\\Betelguese\\Betelguese.csproj": {}
+    "C:\\Projects\\Andromeda\\Betelguese\\Betelguese.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Titan\\Betelguese\\Betelguese.csproj": {
+    "C:\\Projects\\Andromeda\\Betelguese\\Betelguese.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Titan\\Betelguese\\Betelguese.csproj",
+        "projectUniqueName": "C:\\Projects\\Andromeda\\Betelguese\\Betelguese.csproj",
         "projectName": "Betelguese",
-        "projectPath": "C:\\Projects\\Titan\\Betelguese\\Betelguese.csproj",
+        "projectPath": "C:\\Projects\\Andromeda\\Betelguese\\Betelguese.csproj",
         "packagesPath": "C:\\Users\\trevo\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Titan\\Betelguese\\obj\\",
+        "outputPath": "C:\\Projects\\Andromeda\\Betelguese\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\trevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
