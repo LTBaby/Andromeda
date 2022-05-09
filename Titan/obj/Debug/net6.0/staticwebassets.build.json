@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "WDe/ZoMBBifi6C/I5ZabYxqyjvFd2Kc07jRF0+Jhk/k=",
+  "Hash": "dDSenDIvMuVKJnv2Hxgdzeu6uEHSMIbT3o/qhdk7Pys=",
   "Source": "Titan",
   "BasePath": "_content/Titan",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Projects\\Titan\\Betelguese\\Betelguese.csproj",
+      "Identity": "C:\\Projects\\Andromeda\\Betelguese\\Betelguese.csproj",
       "Version": 2,
       "Source": "Betelguese",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

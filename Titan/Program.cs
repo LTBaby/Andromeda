@@ -35,6 +35,8 @@ app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 
 
-app.ConfigureApi();
+app.ConfigureUserController();
+app.ConfigureAnswerController();
+app.ConfigureQuestionController();
 
 app.Run();

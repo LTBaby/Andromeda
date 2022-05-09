@@ -4,11 +4,11 @@ using Betelguese.Models;
 
 namespace Betelguese.Services
 {
-    public class UserService : IUser
+    public class QuestionService : IQuestion
     {
         private readonly IDatabaseAccess _db;
 
-        public UserService(IDatabaseAccess db)
+        public QuestionService(IDatabaseAccess db)
         {
             _db = db;
         }
@@ -17,7 +17,8 @@ namespace Betelguese.Services
         //    _db.LoadData<User, dynamic>("dbo.spUser_GetAll", new { });
         public List<User> GetUsers()
         {
-            return _db.LoadAll<User>();
+            var t = _db.LoadAll<User>();
+            return t;
         }
 
         public async Task<User?> GetUser(int id)

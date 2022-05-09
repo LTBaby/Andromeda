@@ -1,14 +1,14 @@
 ﻿namespace Titan
 {
-    public static class Api
+    public static class AnswerController
     {
-        public static void ConfigureApi(this WebApplication app)
+        public static void ConfigureAnswerController(this WebApplication app)
         {
-            app.MapGet("/Users", GetUsers);
-            app.MapGet("/Users/{id}", GetUser);
-            app.MapPost("/Users", InsertUser);
-            app.MapPut("/Users", UpdateUser);
-            app.MapDelete("/Users", DeleteUser);
+            app.MapGet("/Answers", GetUsers);
+            app.MapGet("/Answers/{id}", GetUser);
+            app.MapPost("/Answers", InsertUser);
+            app.MapPut("/Answers", UpdateUser);
+            app.MapDelete("/Answers", DeleteUser);
         }
 
         private static async Task<IResult> GetUsers(IUser data)

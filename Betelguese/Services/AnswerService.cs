@@ -4,11 +4,11 @@ using Betelguese.Models;
 
 namespace Betelguese.Services
 {
-    public class UserService : IUser
+    public class AnswerService : IAnswer
     {
         private readonly IDatabaseAccess _db;
 
-        public UserService(IDatabaseAccess db)
+        public AnswerService(IDatabaseAccess db)
         {
             _db = db;
         }
@@ -28,13 +28,19 @@ namespace Betelguese.Services
             return results.FirstOrDefault();
         }
 
-        public Task InsertUser(User user) =>
-            _db.SaveData("dbo.spUser_Insert", new { user.FirstName, user.LastName});
+        public Task InsertAnswer(User user)
+        {
+            _db.SaveData("dbo.spUser_Insert", new { user.FirstName, user.LastName });
+        }
 
-        public Task UpdateUser(User user) =>
+        public Task UpdateUser(User user)
+        {
             _db.SaveData("dbo.spUser_Update", user);
+        }
 
-        public Task DeleteUser(int id) =>
+        public Task DeleteUser(int id)
+        {
             _db.SaveData("dbo.spUser_Delete", new { Id = id });
+        }
     }
 }

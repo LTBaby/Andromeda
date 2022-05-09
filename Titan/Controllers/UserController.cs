@@ -1,8 +1,8 @@
 ﻿namespace Titan
 {
-    public static class Api
+    public static class UserController
     {
-        public static void ConfigureApi(this WebApplication app)
+        public static void ConfigureUserController(this WebApplication app)
         {
             app.MapGet("/Users", GetUsers);
             app.MapGet("/Users/{id}", GetUser);
@@ -11,14 +11,11 @@
             app.MapDelete("/Users", DeleteUser);
         }
 
-        private static async Task<IResult> GetUsers(IUser data)
+        private static IResult GetUsers(IUser data)
         {
             try
             {
-                //var t = await data.GetUsers();
-                //return Results.Ok(await data.GetUsers());
-                var tt = data.GetUsers();
-                return Results.Ok(tt);
+                return Results.Ok(data.GetUsers());
             }
             catch (Exception ex)
             {
@@ -40,7 +37,7 @@
             }
         }
 
-        private static async Task<IResult> InsertUser(User user, IUser data)
+        private static async Task<IResult> InsertUser(Betelguese.Models.User user, IUser data)
         {
             try
             {
@@ -53,7 +50,7 @@
             }
         }
 
-        private static async Task<IResult> UpdateUser(User user, IUser data)
+        private static async Task<IResult> UpdateUser(Betelguese.Models.User user, IUser data)
         {
             try
             {
